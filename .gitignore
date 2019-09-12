@@ -1,0 +1,9 @@
+
+# Compiled files
+maze
+maze.bc
+maze_klee
+maze_klee.bc
+
+# Other
+.DS_Store
