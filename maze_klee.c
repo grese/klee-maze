@@ -53,6 +53,7 @@ int main (int argc, char *argv[])
 
     maze[y][x] = 'X';
 
+    // Use Klee's symbolic execution
     klee_make_symbolic(program, ITERS, "program");
 
     while(i < ITERS)
@@ -76,7 +77,7 @@ int main (int argc, char *argv[])
             x++;
             break;
         default:
-            printf("Wrong command!(only w,s,a,d accepted!)\n");
+            printf("Wrong command! (only w,s,a,d accepted!)\n");
             printf("You lose!\n");
             exit(-1);
         }
@@ -85,7 +86,7 @@ int main (int argc, char *argv[])
         {
             printf("You win!\n");
             printf("Your solution %s\n", program);
-            klee_assert(0);
+            klee_assert(0); // Klee assertion identifies the win
             exit(1);
         }
 

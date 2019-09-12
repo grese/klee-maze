@@ -10,9 +10,6 @@
  * ./maze
  * ssssddddwwaawwddddssssddwwww
  * 
- * Run with solution:
- * cat ./solution.txt | ./maze
- * 
  * http://feliam.wordpress.com/2010/10/07/the-symbolic-maze/
  */
 
@@ -80,7 +77,7 @@ int main (int argc, char *argv[])
             x++;
             break;
         default:
-            printf("Wrong command!(only w,s,a,d accepted!)\n");
+            printf("Wrong command! (only w,s,a,d accepted!)\n");
             printf("You lose!\n");
             exit(-1);
         }
@@ -100,7 +97,7 @@ int main (int argc, char *argv[])
 
         if (ox==x && oy==y)
         {
-            printf("You lose\n");
+            printf("You lose!\n");
             exit(-2);
         }
 
@@ -111,5 +108,5 @@ int main (int argc, char *argv[])
         sleep(1);    //wait for next input
     }
 
-    printf("You lose\n");
+    printf("You lose!\n");
 }
