@@ -5,13 +5,19 @@ Maze Example for Klee Symbolic Execution
 ## Install/Setup
 
 - [Install Docker](https://docs.docker.com/get-started/)
+
+### Option 1: Use ready-made "klee-maze" docker image
+
+- docker pull grese/klee-maze
+- docker run -it grese/klee-maze
+
+### Option 2: Manually install & setup docker image
+
 - Install Klee Docker Image: `docker pull klee/klee:2.0`
 - Run Klee Container: `docker run --rm -ti --ulimit='stack=-1:-1' klee/klee:2.0`
 - Update aptitude: `sudo apt-get update`
 - Install git: `sudo apt-get install git-core`
 - Download maze: `git clone https://github.com/grese/klee-maze.git`
-- (Optional) Save your Docker container (run in another terminal - OUTSIDE THE DOCKER CONTAINER): `docker commit <CONTAINER_ID> klee-maze`
-  - If you save your docker container, it can be restored later by running `docker run -it klee-maze`
 
 ## Usage
 
