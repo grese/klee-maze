@@ -2,8 +2,10 @@
 # Compiled files
 maze
 maze.bc
+maze.o
 maze_klee
 maze_klee.bc
+maze_klee.o
 
 # Other
 .DS_Store
