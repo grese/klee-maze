@@ -28,7 +28,9 @@ The original maze program (without klee). Source is in [maze.c](https://github.c
 - `cd klee-maze`
 - Build: `gcc maze.c -o maze`
 - Run manually: `./maze`
-  - (enter a string of "moves" and press "enter")
+  - Input a string of "moves" and press "enter"
+  - Allowed moves: w (up), d (right), s (down), a (left)
+  - Example solution: ssssddddwwaawwddddssssddwwww
 - Run w/solution: `cat solution.txt | ./maze`
 
 ### Build & Run Maze w/Klee
