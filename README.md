@@ -2,7 +2,7 @@
 
 ## Maze
 
-The original maze program (without klee).  Source is in "maze.c"
+The original maze program (without klee).  Source is in [maze.c](https://github.com/grese/klee-maze/blob/master/maze.c)
 
 - Build: `gcc maze.c -o maze`
 - Run manually: `./maze`
@@ -11,7 +11,7 @@ The original maze program (without klee).  Source is in "maze.c"
 
 ## Maze with Klee
 
-The maze program using Klee symbolic execution and assertions.  When klee evaluates the maze, it will discover the "actual solution", and any "hidden solutions" (which exist due to "bugs" in the maze).  Source is in "maze_klee.c"
+The maze program using Klee symbolic execution and assertions.  When klee evaluates the maze, it will discover the "actual solution", and any "hidden solutions" (which exist due to "bugs" in the maze).  Source is in [maze_klee.c](https://github.com/grese/klee-maze/blob/master/maze_klee.c)
 
 - Build LLVM Bytecode: `./build_bc.sh` (builds "maze_klee.bc")
 - Run Klee on Bytecode: `./run_klee.sh` (runs klee on "maze_klee.bc")
