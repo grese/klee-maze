@@ -7,5 +7,9 @@ maze_klee
 maze_klee.bc
 maze_klee.o
 
+# Klee output
+klee-last
+klee-out-*
+
 # Other
 .DS_Store
