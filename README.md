@@ -1,6 +1,6 @@
 # klee-maze
 
-Maze Example for Klee Symbolic Execution
+Maze Example for Klee Symbolic Execution. This repo's maze is based on (this klee maze tutorial)[https://feliam.wordpress.com/2010/10/07/the-symbolic-maze/], with a few updates and convenience features.
 
 ## Install/Setup
 
