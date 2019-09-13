@@ -4,7 +4,9 @@ Maze Example for Klee Symbolic Execution
 
 ## Install/Setup
 
-- [Install Docker](https://docs.docker.com/get-started/)
+### Prerequisites
+
+- [Install Docker](https://docs.docker.com/get-started/) (if you don't have it already)
 
 ### Option 1: Use ready-made "klee-maze" docker image
 
@@ -17,7 +19,7 @@ Maze Example for Klee Symbolic Execution
 - Run Klee Container: `docker run --rm -ti --ulimit='stack=-1:-1' klee/klee:2.0`
 - Update aptitude: `sudo apt-get update`
 - Install git: `sudo apt-get install -y git-core`
-- Download maze: `git clone https://github.com/grese/klee-maze.git`
+- Download maze: `git clone https://github.com/grese/klee-maze.git ~/maze`
 
 ## Usage
 
@@ -25,7 +27,7 @@ Maze Example for Klee Symbolic Execution
 
 The original maze program (without symbolic execution). Source is in [maze.c](https://github.com/grese/klee-maze/blob/master/maze.c).
 
-- `cd klee-maze`
+- `cd maze`
 - Build: `gcc maze.c -o maze`
 - Run manually: `./maze`
   - Input a string of "moves" and press "enter"
@@ -37,6 +39,7 @@ The original maze program (without symbolic execution). Source is in [maze.c](ht
 
 The maze program using Klee symbolic execution and assertions.  When klee evaluates the maze, it will discover the "actual solution", and any "hidden solutions" (which exist due to "bugs" in the maze). Source is in [maze_klee.c](https://github.com/grese/klee-maze/blob/master/maze_klee.c)
 
-- Build LLVM Bytecode: `./build_bc.sh` (builds "maze_klee.bc")
-- Run Klee on Bytecode: `./run_klee.sh` (runs klee on "maze_klee.bc")
-- Show solutions: `./show_solutions.sh` (gets klee test results, and prints solutions)
+- (within `/home/klee/maze/`)
+- Build LLVM Bytecode: `./scripts/build_bc.sh` (builds "maze_klee.bc" using "clang -emit-llvm")
+- Run Klee on Bytecode: `./scripts/run_klee.sh` (runs klee on "maze_klee.bc" using "--emit-all-errors")
+- Show solutions: `./scripts/show_solutions.sh` (gets klee test results from "ktest-tool", and prints maze solutions)
