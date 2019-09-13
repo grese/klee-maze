@@ -41,5 +41,6 @@ The maze program using Klee symbolic execution and assertions.  When klee evalua
 
 - `cd ~/maze`
 - Build LLVM Bytecode: `./scripts/build_bc.sh` (builds "maze_klee.bc" using "clang -emit-llvm")
+  - Ignore the "implicit declaration of function '__assert_fail'" warning.
 - Run Klee on Bytecode: `./scripts/run_klee.sh` (runs klee on "maze_klee.bc" using "--emit-all-errors")
 - Show solutions: `./scripts/show_solutions.sh` (gets klee test results from "ktest-tool", and prints maze solutions)
