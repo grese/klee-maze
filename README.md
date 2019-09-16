@@ -27,6 +27,19 @@ Maze Example for Klee Symbolic Execution. This repo's maze is based on [this kle
 
 The original maze program (without symbolic execution). Source is in [maze.c](https://github.com/grese/klee-maze/blob/master/maze.c).
 
+```text
+The MaZe:
+(start @ 'X')
+
++-+---+---+
+|X|     |#|
+| | --+ | |
+| |   | | |
+| +-- | | |
+|     |   |
++-----+---+
+```
+
 - `cd ~/maze`
 - Build: `gcc maze.c -o maze`
 - Run manually: `./maze`
