@@ -2,6 +2,19 @@
 
 Maze Example for Klee Symbolic Execution. This repo's maze is based on [this klee maze tutorial](https://feliam.wordpress.com/2010/10/07/the-symbolic-maze/), with a few updates and convenience features.
 
+```text
+The MaZe:
+(start @ 'X')
+
++-+---+---+
+|X|     |#|
+| | --+ | |
+| |   | | |
+| +-- | | |
+|     |   |
++-----+---+
+```
+
 ## Install/Setup
 
 ### Prerequisites
@@ -26,19 +39,6 @@ Maze Example for Klee Symbolic Execution. This repo's maze is based on [this kle
 ### Build & Run Maze
 
 The original maze program (without symbolic execution). Source is in [maze.c](https://github.com/grese/klee-maze/blob/master/maze.c).
-
-```text
-The MaZe:
-(start @ 'X')
-
-+-+---+---+
-|X|     |#|
-| | --+ | |
-| |   | | |
-| +-- | | |
-|     |   |
-+-----+---+
-```
 
 - `cd ~/maze`
 - Build: `gcc maze.c -o maze`
